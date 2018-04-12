@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myNamespace">
+    <resultMap id="studentMap" type="cn.qy.app01.entity.Student">
+        <id property="id" column="sid"></id>
+        <result property="name" column="sname"></result>
+        <result property="sal" column="ssal"></result>
+    </resultMap>
+
+    <insert id="add1" parameterType="cn.qy.app01.entity.Student">
+        insert into student(sid,sname,ssal) values(#{id},#{name},#{sal})
+    </insert>
+
+
+    <select id="findById" parameterType="int" resultMap="studentMap">
+        SELECT sid,sname,ssal from student where sid=#{id}
+    </select>
+
+    <delete id="deletById" parameterType="int">
+        DELETE * from student WHERE sid = #{id}
+    </delete>
+</mapper>

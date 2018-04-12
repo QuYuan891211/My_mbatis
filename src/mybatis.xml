@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties"></properties>
+    <typeAliases>
+        <typeAlias type="cn.qy.app01.entity.Student" alias="student"></typeAlias>
+    </typeAliases>
+    <environments default="oracle_environment">
+        <environment id="oracle_environment">
+            <!-- mybatis使用jdbc事务管理方式 -->
+            <transactionManager type="jdbc"/>
+            <!-- mybatis使用连接池方式来获取连接 -->
+            <dataSource type="pooled">
+                <!-- 配置与数据库交互的4个必要属性 -->
+                <property name="driver" value="${oracle.driver}"></property>
+                <property name="url" value="${oracle.url}"></property>
+                <property name="username" value="${oracle.username}"></property>
+                <property name="password" value="${oracle.password}"></property>
+            </dataSource>
+        </environment>
+    </environments>
+
+<mappers>
+    <mapper resource="cn/qy/app01/entity/StudentMapper.xml"></mapper>
+</mappers>
+</configuration>
