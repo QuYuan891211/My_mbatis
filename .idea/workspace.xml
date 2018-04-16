@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c6e359f-2a96-4fee-9490-8b959f0beb3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app01/readme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/Oracle_sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/dao/StaffDepartmentDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/dao/StudentsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/Card.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/Department.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/Staff.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/StaffMapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/Students.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/cardsMapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/departmentMapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/entity/studentsMapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/readme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app02/utls/MbatisUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/qy/app03/readme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/qy/app01/dao/StudentDao.java" afterPath="$PROJECT_DIR$/src/cn/qy/app01/dao/StudentDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/qy/app01/entity/StudentMapper.xml" afterPath="$PROJECT_DIR$/src/cn/qy/app01/entity/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mybatis.xml" afterPath="$PROJECT_DIR$/src/mybatis.xml" />
-    </list>
+    <list default="true" id="2c6e359f-2a96-4fee-9490-8b959f0beb3e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -577,12 +556,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523499062177</updated>
-      <workItem from="1523499071088" duration="49605000" />
+      <workItem from="1523499071088" duration="49666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49605000" />
+    <option name="totallyTimeSpent" value="49666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
