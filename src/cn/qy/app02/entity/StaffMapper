@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="staffNamespace">
+    <resultMap id="staffMap" type="cn.qy.app02.entity.Staff">
+        <id property="id" column="sid"></id>
+        <result property="name" column="sname"></result>
+        <association property="department" resultMap="departmentNamespace.departmentMap"></association>
+    </resultMap>
+
+<select id="findDepartmentByStaff" parameterType="string" resultMap="departmentNamespace.departmentMap">
+    select s.sid,s.sname,d.did,d.dname
+        from department d,staff s
+        where d.did = s.sdid
+        and s.sname = #{name}
+</select>
+</mapper>

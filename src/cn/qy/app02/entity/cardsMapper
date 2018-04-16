@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cardsNamespace">
+    <resultMap id="cardsMap" type="cn.qy.app02.entity.Card">
+        <id property="code" column="id"></id>
+        <result property="address" column="address"></result>
+    </resultMap>
+</mapper>

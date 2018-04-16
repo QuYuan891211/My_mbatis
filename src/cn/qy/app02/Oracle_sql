@@ -1,0 +1,39 @@
+create table students(
+  sid NUMBER (10) PRIMARY KEY ,
+  sname VARCHAR (10),
+  ssex VARCHAR (5),
+  cid NUMBER (10),
+  CONSTRAINT cid_fk FOREIGN key(cid) REFERENCES cards(id)
+);
+
+CREATE TABLE cards(
+   id NUMBER (10) PRIMARY KEY ,
+   address VARCHAR (50)
+);
+
+insert into cards(id,address) VALUES(11,'北京');
+insert into cards(id,address) VALUES(1,'东京');
+insert into cards(id,address) VALUES(21,'天津');
+insert into cards(id,address) VALUES(31,'南京');
+insert into cards(id,address) VALUES(5,'内江');
+
+insert into students(sid,sname,ssex,cid) VALUES (2,'ddd','f',1);
+insert into students(sid, sname, ssex, cid) VALUES (1,'sss','f',21);
+insert into students(sid, sname, ssex, cid) VALUES (3,'lz','f',5);
+insert into students(sid, sname, ssex, cid) VALUES (4,'lc','m',11);
+
+
+//一对多
+create table department(
+did NUMBER (5) primary key,
+dname varchar(10)
+ );
+create table staff(
+sid NUMBER(5) primary key,
+sname varchar(10),
+    sdid NUMBER(5),
+    constraint sdid_fk foreign key(sdid) references department(did)
+);
+insert into department(did,dname) values(1,'java');
+insert into staff(sid,sname,sdid) values(1,'caoxi',1);
+insert into staff(sid,sname,sdid) values(2,'ddd',1);

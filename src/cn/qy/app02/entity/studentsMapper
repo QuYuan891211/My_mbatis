@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="studentNamespace">
+    <resultMap id="studentsMap" type="cn.qy.app02.entity.Students">
+        <id property="id" column="sid"></id>
+        <result property="name" column="sname"></result>
+        <result property="sex" column="ssex"></result>
+        <association property="card" resultMap="cardsNamespace.cardsMap"></association>
+    </resultMap>
+
+    <select id="findById" parameterType="int" resultMap="studentsMap">
+        SELECT s.sid, s.sname, c.id, c.address from students s INNER JOIN cards c on s.cid = c.id and s.sid = #{id}
+    </select>
+</mapper>

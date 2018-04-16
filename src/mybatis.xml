@@ -23,5 +23,9 @@
 
 <mappers>
     <mapper resource="cn/qy/app01/entity/StudentMapper.xml"></mapper>
+    <mapper resource="cn/qy/app02/entity/studentsMapper"></mapper>
+    <mapper resource="cn/qy/app02/entity/departmentMapper"></mapper>
+    <mapper resource="cn/qy/app02/entity/StaffMapper"></mapper>
+    <mapper resource="cn/qy/app02/entity/cardsMapper"></mapper>
 </mappers>
 </configuration>

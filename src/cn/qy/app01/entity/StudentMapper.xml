@@ -17,7 +17,76 @@
         SELECT sid,sname,ssal from student where sid=#{id}
     </select>
 
-    <delete id="deletById" parameterType="int">
-        DELETE * from student WHERE sid = #{id}
+    <delete id="deleteById" parameterType="int">
+        DELETE from student where sid=#{id}
     </delete>
+
+    <select id="findAll" resultMap="studentMap">
+        SELECT sid,sname,ssal from student
+    </select>
+
+    <select id="dynamicFind" parameterType="Map" resultMap="studentMap">
+        select sid,sname,ssal FROM student
+        <where>
+            <if test="pname!= null">
+                and sname = #{pname}
+            </if>
+            <if test="psal != null">
+               and  ssal = #{psal}
+            </if>
+        </where>
+    </select>
+
+
+    <delete id="dynamicDelete">
+        DELETE from student WHERE sid in
+        <foreach collection="array" open="(" close=")" separator="," item="ids">
+            ${ids}
+        </foreach>
+    </delete>
+
+    <insert id="dynamicInsert" parameterType="cn.qy.app01.entity.Student">
+        insert into student(<include refid="key"/>) VALUES (<include refid="value"/>)
+    </insert>
+
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                sid,
+            </if>
+            <if test="name!=null">
+                sname,
+            </if>
+            <if test="sal!=null">
+                ssal,
+            </if>
+        </trim>
+    </sql>
+    <sql id="value">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                #{id},
+            </if>
+            <if test="name!=null">
+                #{name},
+            </if>
+            <if test="sal!=null">
+                #{sal},
+            </if>
+        </trim>
+    </sql>
+
+
+    <update id="dynamicUpdate" parameterType="cn.qy.app01.entity.Student">
+        update student
+        <set>
+            <if test="name != null">
+                sname=#{name},
+            </if>
+            <if test="sal != null">
+                ssal=#{sal},
+            </if>
+        </set>
+        WHERE sid=#{id}
+    </update>
 </mapper>
