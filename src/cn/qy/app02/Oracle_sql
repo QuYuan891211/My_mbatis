@@ -37,3 +37,25 @@ sname varchar(10),
 insert into department(did,dname) values(1,'java');
 insert into staff(sid,sname,sdid) values(1,'caoxi',1);
 insert into staff(sid,sname,sdid) values(2,'ddd',1);
+
+//多对多
+create table police(
+pid NUMBER (5) primary key,
+pname varchar(10)
+ );
+create table district(
+did NUMBER (5) primary key,
+dname varchar(10)
+ );
+create table middles(
+pid NUMBER(5),
+did NUMBER(5),
+primary key(pid,did)
+);
+insert into police(pid,pname) values(1,'caoxi');
+insert into police(pid,pname) values(2,'sss');
+insert into district(did,dname) values(1,'chaoyang');
+insert into district(did,dname) values(2,'xicheng');
+insert into middles(pid,did) values(1,1);
+insert into middles(pid,did) values(1,2);
+insert into middles(pid,did) values(2,1);

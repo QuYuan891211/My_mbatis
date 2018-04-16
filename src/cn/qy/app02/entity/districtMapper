@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="districtNamespace">
+    <resultMap id="districtMap" type="cn.qy.app02.entity.District">
+        <id property="id" column="did"></id>
+        <result property="name" column="dname"></result>
+    </resultMap>
+    <select id="findDistrictByPolice" parameterType="string" resultMap="districtMap">
+        select d.did,d.dname FROM police p, middles m, district d WHERE  p.pid = m.pid and m.did = d.did and p.pname = #{name}
+    </select>
+</mapper>
