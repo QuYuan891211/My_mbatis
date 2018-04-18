@@ -1,0 +1,7 @@
+create table player(
+   sid  NUMBER (5) primary key,
+   sname varchar(10),
+   ssal NUMBER (8,2)
+);
+
+INSERT INTO player(sid, sname, ssal) VALUES (4,'kobe',234.5);

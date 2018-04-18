@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.springframework.web.servlet-3.0.5.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/CS/JavaWeb/WebLibs/springmvc-springioc-lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

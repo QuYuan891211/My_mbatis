@@ -29,5 +29,7 @@
     <mapper resource="cn/qy/app02/entity/cardsMapper"></mapper>
     <mapper resource="cn/qy/app02/entity/districtMapper"></mapper>
     <mapper resource="cn/qy/app02/entity/policeMapper"></mapper>
+    <mapper resource="cn/qy/app03/sql/entity/playerMapper"></mapper>
+
 </mappers>
 </configuration>

@@ -11,6 +11,9 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -23,5 +26,8 @@
     <orderEntry type="library" name="mybatis-lib" level="project" />
     <orderEntry type="library" name="ojdbc5" level="project" />
     <orderEntry type="library" name="log4j" level="project" />
+    <orderEntry type="library" name="spring3.0" level="project" />
+    <orderEntry type="library" name="org.springframework.web.servlet-3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="mybatis-spring-1.1.1" level="project" />
   </component>
 </module>

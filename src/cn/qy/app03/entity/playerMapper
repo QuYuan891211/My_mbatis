@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="playerNamespace">
+    <resultMap id="playerMap" type="cn.qy.app03.entity.Player">
+        <id property="id" column="pid"></id>
+        <result property="name" column="pname"></result>
+        <result property="sal" column="psal"></result>
+    </resultMap>
+    <insert id="add" parameterType="cn.qy.app03.entity.Player">
+        insert into player(pid,pname,psal) VALUES(#{id},#{name},#{sal});
+    </insert>
+</mapper>
